@@ -3,6 +3,7 @@ import ServiceCardAll from './ServiceCardAll';
 
 const ServiceAll = () => {
     const [serviceAll, setServiceAll] = useState([]);
+
     useEffect( () =>{
         fetch('http://localhost:5000/serviceAll')
         .then(res => res.json())

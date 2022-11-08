@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const {login, signInWithGoogle} = useContext(AuthContext);
 
     const handleUserLogin = event =>{
         event.preventDefault();
@@ -17,10 +17,26 @@ const Login = () => {
         login(email, password)
         .then (result =>{
             const user = result.user;
-            console.log(user);
+            // console.log(user);
+
+            const currentUser = {
+                email: user.email
+            }
+            console.log(currentUser);
+
         })
         .catch(err => console.error(err));
 
+    }
+
+    // Google signIn:
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then( result =>{
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(err => console.error(err))
     }
 
 
@@ -71,7 +87,7 @@ const Login = () => {
         <div className="form-control mt-6">
             <input className="btn btn-primary" type="submit" value="Login" />
         </div>
-        <button  className="btn btn-outline btn-primary"><FaGoogle className='m-2'></FaGoogle> Google</button>
+        <button onClick={handleGoogleSignIn}  className="btn btn-outline btn-primary"><FaGoogle className='m-2'></FaGoogle> Google</button>
         <button  className="btn btn-outline btn-primary"><FaGithub className='m-2'></FaGithub> Github</button>
       </form>
       <p className='text-center'>Immigration and Consultant <Link className='text-orange-600' to="/signup">Sign Up</Link> </p>

@@ -4,6 +4,7 @@ import Home from "../../Pages/Home/Home.js/Home";
 import ServiceAll from "../../Pages/Home/Services/ServiceAll";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import Blog from '../../Pages/Blog/Question/Questions';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
             path: '/serviceAll',
             element: <ServiceAll>
             </ServiceAll>
+        },
+        {
+            path: '/blog',
+            element: <Blog></Blog>
+
         }
 
 
