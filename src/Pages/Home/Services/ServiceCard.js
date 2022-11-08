@@ -10,10 +10,10 @@ const ServiceCard = ({service}) => {
          <div className="card-body">
     <h2 className="card-title">{title}</h2>
     <p className='text-2xl text-orange-600 font-semibold'>Fees: {fees}</p>
-    <p>Details: {details}</p>
+    <p> {details.slice(0, 50) + '...'}</p>
     <div className="card-actions justify-end">
       <Link to={`/checkout/${_id}`}>
-      <button className="btn btn-primary">Checkout</button>
+      <button className="btn btn-primary">Details</button>
       </Link>
     </div>
   </div>

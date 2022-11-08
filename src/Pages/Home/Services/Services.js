@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
-    const [Services, setServices] = useState([]);
+    const [services, setServices] = useState([]);
     useEffect( () =>{
-        fetch('services.json')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
@@ -20,12 +20,13 @@ const Services = () => {
             <div className='grid gap-6 mb-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             
                 {
-                    Services.map(service => <ServiceCard
+                    services.map(service => <ServiceCard
                     key={service._id}
                         service={service}
                     ></ServiceCard>)
                 }
             </div>
+            <button className="btn btn-info mb-4">See All</button>
         </div>
     );
 };
