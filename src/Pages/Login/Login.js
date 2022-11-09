@@ -43,8 +43,7 @@ const Login = () => {
             console.log(data);
             //not the best practice:
             localStorage.setItem('immigration-token', data.token) ;
-            
-            navigate(from, {replace: true});
+            // navigate(from, {replace: true});
           })
 
 
@@ -111,9 +110,9 @@ const Login = () => {
         <div className="form-control mt-6">
             <input className="btn btn-primary" type="submit" value="Login" />
         </div>
-        <button onClick={handleGoogleSignIn}  className="btn btn-outline btn-primary"><FaGoogle className='m-2'></FaGoogle> Google</button>
-        <button  className="btn btn-outline btn-primary"><FaGithub className='m-2'></FaGithub> Github</button>
       </form>
+      <button onClick={handleGoogleSignIn}  className="btn btn-outline btn-primary mb-3"><FaGoogle className='m-2'></FaGoogle> Google</button>
+        <button  className="btn btn-outline btn-primary"><FaGithub className='m-2'></FaGithub> Github</button>
       <p className='text-center'>Immigration and Consultant <Link className='text-orange-600' to="/signup">Sign Up</Link> </p>
     </div>
   </div>
