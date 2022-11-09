@@ -7,6 +7,7 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import Blog from '../../Pages/Blog/Question/Questions';
 import ServiceInfo from "../../Pages/ServiceInfo/ServiceInfo";
 import Orders from "../../Pages/Orders/Orders";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 
 
@@ -38,7 +39,9 @@ const router = createBrowserRouter([
         },
         {
             path: '/serviceInfo/:id',
-            element: <ServiceInfo></ServiceInfo>,
+            element: <PrivateRouter>
+                <ServiceInfo></ServiceInfo>
+            </PrivateRouter>,
             loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         },
         

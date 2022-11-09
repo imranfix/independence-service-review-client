@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import img from '../../Assets/login/login1.webp';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
@@ -7,6 +7,12 @@ import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
     const {login, signInWithGoogle} = useContext(AuthContext);
+    // redirect:
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleUserLogin = event =>{
         event.preventDefault();
@@ -18,11 +24,12 @@ const Login = () => {
         .then (result =>{
             const user = result.user;
             console.log(user);
+            navigate(from, {replace: true});
 
-            const currentUser = {
-                email: user.email
-            }
-            console.log(currentUser);
+            // const currentUser = {
+            //     email: user.email
+            // }
+            // console.log(currentUser);
 
         })
         .catch(err => console.error(err));
