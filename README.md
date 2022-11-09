@@ -5,3 +5,4 @@ About Project Information:
 3. A banner sliding and added six image carousel section
 4. Users can log in and log out and create a user with firebase authentications.
 5. Add google firebase login authentication system.
+6. Implement redirect private route 
