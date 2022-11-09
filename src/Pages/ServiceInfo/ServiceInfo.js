@@ -47,7 +47,7 @@ const ServiceInfo = () => {
     return (
         <div className='grid grid-cols-1'>
 
-         <div className='mb-5'><h3>section-1</h3>
+         <div className='mb-5'><h3 className='text-2xl mb-3'>You selected: {title}</h3>
          <div className="card card-compact w-22 bg-base-100 shadow-xl">
         <figure><img className='p-3' src={image} alt="Shoes" /></figure>
          <div className="card-body">
@@ -66,8 +66,8 @@ const ServiceInfo = () => {
     <input name="photo" type="text" placeholder="Photo url" className="input input-bordered w-full mb-3" />
     <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-bordered w-full mb-3" />
 
-        </div>
-        <textarea name="review" className="textarea textarea-bordered w-full h-24 mb-2" placeholder="review"></textarea>
+</div>
+        <textarea name="review" className="textarea textarea-bordered w-full h-24 mb-2" placeholder="Review"></textarea>
         <input className='btn' type='submit' value='Confirm'/>
    </form>
         
