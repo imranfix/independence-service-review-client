@@ -14,7 +14,7 @@ const BannerItem = ({slide}) => {
 
           <div className=" absolute flex justify-end transform -translate-y-1/2 left-24 top-1/2 w-2/5">
            <p className='text-white text-xl mt-14'>
-               There Are Many Variactions of Passages of Available, But The Majority Have Suffered Alteration in Some Form
+               There Are Many kinds of programmes visa Available, But The Majority Have Suffered Alteration in Some 
            </p>
           </div>
 
