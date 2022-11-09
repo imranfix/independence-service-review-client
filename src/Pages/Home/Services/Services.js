@@ -12,10 +12,10 @@ const Services = () => {
 
     return (
         <div>
-            <div className='text-center mb-4'>
-                <p className='text-2xl font-bold text-orange-600'>Services</p>
-                <h2 className='text-5xl font-semibold'>Our Service Area</h2>
-                <p>The majority have suffered alteration <br /> in some form, by injected humour, or randomised words which <br /> don't look even slightly believable. </p>
+            <div className='text-center mb-5 border rounded-md w-full'>
+                <p className='text-4xl font-bold text-orange-600 mb-3'>Services</p>
+                {/* <h2 className='text-5xl font-semibold'>Our Service Area</h2> */}
+                <p className='mb-5'>We are quite easy to find and have different locations around the globe. <br /> Just click above to find the location closest to you and pop into our office. <br /> We are open on weekdays and Saturdays to make it easier for  clients who are working <br /> to speak to us. We are social on facebook, so do send us a message if you would like  </p>
             </div>
 
             <div className='grid gap-6 mb-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
