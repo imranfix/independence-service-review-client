@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
