@@ -41,7 +41,7 @@ const Orders = () => {
             .then(data =>{
                 console.log(data);
                 if(data.deletedCount >  0){
-                 alert("Deleted Successfully")
+                  alert("Deleted Successfully")
                     const remaining = orders.filter(order => order._id !== id);
                     setOrders(remaining);
                 }
@@ -84,11 +84,6 @@ const Orders = () => {
     {/* <!-- head --> */}
     <thead>
       <tr>
-        {/* <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>  */}
         <th>Client Details</th>
         <th>Catagory</th>
         <th>Review</th>
