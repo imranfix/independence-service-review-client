@@ -16,7 +16,7 @@ const Header = () => {
     
   const navbarItems = <>
   
-  <li className='font-semibold mr-2'><Link to="/serviceAll">Home</Link></li>
+  <li className='font-semibold mr-2 me-2'><Link to="/serviceAll">Home</Link></li>
    
     {
         user?.email? 
@@ -49,7 +49,8 @@ const Header = () => {
 
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-                <img className='w-16' src={logo} alt='' />
+                <img className='w-12' src={logo} alt='' />
+                <p>Immigration</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

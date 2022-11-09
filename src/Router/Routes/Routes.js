@@ -42,12 +42,14 @@ const router = createBrowserRouter([
             element: <PrivateRouter>
                 <ServiceInfo></ServiceInfo>
             </PrivateRouter>,
-            loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+            loader: ({params}) => fetch(`https://independence-service-review-server.vercel.app/services/${params.id}`)
         },
         
         {
             path: '/orders',
-            element: <Orders></Orders>
+            element: <PrivateRouter>
+                <Orders></Orders>
+            </PrivateRouter>
         }
 
 

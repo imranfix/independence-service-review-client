@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
@@ -25,10 +24,11 @@ const ServiceInfo = () => {
             review,
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://independence-service-review-server.vercel.app/orders', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('immigration-token')}`
             },
             body: JSON.stringify(order)
         })
@@ -48,7 +48,7 @@ const ServiceInfo = () => {
     return (
         <div className='grid grid-cols-1'>
 
-         <div className='mb-5'><h3 className='text-2xl mb-3'>You selected: {title}</h3>
+         <div className='mb-5'><h3 className='text-2xl mb-3'>You Selected: {title} Service</h3>
          <div className="card card-compact w-22 bg-base-100 shadow-xl">
         <figure><img className='p-3' src={image} alt="Shoes" /></figure>
          <div className="card-body">
@@ -61,8 +61,8 @@ const ServiceInfo = () => {
     </div>
  </div>
 
-   <form onSubmit={handlePlaceReview} className='mb-5 form-bordered'>
-    <div className='mb-2'><h3>section-2</h3>
+   <form onSubmit={handlePlaceReview} className='mb-5 mt-3 form-bordered'>
+    <div className='mb-2'><h3 className='text-3xl mb-2'>Service Booking Information:</h3>
     <input name="name" type="text" placeholder="Your name" className="input input-bordered w-full mb-3" />
     <input name="photo" type="text" placeholder="Photo url" className="input input-bordered w-full mb-3" />
     <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-bordered w-full mb-3" />

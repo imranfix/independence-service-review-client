@@ -7,14 +7,14 @@ const Footer = () => {
         <footer className="footer p-32 bg-black text-white">
         <div>
                 <img className='w-16' src={logo} alt='' />
-          <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+          <p>Immigration $ Consultancy <br/>Providing reliable Information </p>
         </div> 
         <div>
           <span className="footer-title">Services</span> 
-        <a href="/" className="link link-hover">Branding</a> 
-        <a href="/" className="link link-hover">Design</a> 
-        <a href="/" className="link link-hover">Marketing</a> 
-        <a href="/" className="link link-hover">Advertisement</a>
+        <a href="/" className="link link-hover">Education</a> 
+        <a href="/" className="link link-hover">Jobs</a> 
+        <a href="/" className="link link-hover">Conference</a> 
+        <a href="/" className="link link-hover">Medical</a>
         </div> 
         <div>
           <span className="footer-title">Company</span> 
@@ -24,7 +24,7 @@ const Footer = () => {
         <a href="/" className="link link-hover">Press kit</a>
         </div> 
         <div>
-          <span className="footer-title">Legal</span> 
+          <span className="footer-title">Rules</span> 
         <a href="/" className="link link-hover">Terms of use</a> 
         <a href="/" className="link link-hover">Privacy policy</a> 
         <a href="/" className="link link-hover">Cookie policy</a>

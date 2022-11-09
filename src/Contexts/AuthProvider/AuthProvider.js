@@ -34,6 +34,7 @@ const AuthProvider = ({children}) => {
 
     // signOut / logOut:
     const logOut = () =>{
+        localStorage.removeItem('immigration-token');
         return signOut(auth);
     }
 
