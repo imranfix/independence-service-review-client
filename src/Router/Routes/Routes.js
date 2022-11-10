@@ -56,6 +56,13 @@ const router = createBrowserRouter([
       ]
     },
 
+    {
+        path: '*',
+        element: <div className="text-center mt-12"> <h1><span className="text-5xl text-orange-600">Sorry!!</span> This route is not Found <br />
+            <span className="text-5xl">404</span>
+        </h1></div>
+    }
+
 ]);
 
 export default router;

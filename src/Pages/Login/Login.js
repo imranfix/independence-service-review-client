@@ -3,10 +3,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 import img from '../../Assets/login/login1.webp';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 const Login = () => {
     const {login, signInWithGoogle} = useContext(AuthContext);
+    useTitle('login');
     // redirect:
     const location = useLocation();
     const navigate = useNavigate();
