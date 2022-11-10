@@ -1,8 +1,8 @@
 import React from 'react';
-import img1 from '../../../Assets/banner/banner-4.jpg';
+import img1 from '../../../Assets/banner/banner88.jpg';
 import img2 from '../../../Assets/banner/banner22.jfif';
 import img3 from '../../../Assets/banner/banner33.jpeg';
-import img4 from '../../../Assets/banner/banner44.jpg';
+import img4 from '../../../Assets/banner/banner-4.jpg';
 import img5 from '../../../Assets/banner/banner55.jpg';
 import img6 from '../../../Assets/banner/banner66.jpg';
 import BannerItem from './BannerItem';
@@ -50,7 +50,7 @@ const bannerData = [
 
 const Banner = () => {
     return (
-        <div className="carousel w-full py-10">
+        <div className="carousel w-full py-10 brightness-125">
 
         {
             bannerData.map(slide => <BannerItem

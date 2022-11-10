@@ -7,7 +7,7 @@ const BannerItem = ({slide}) => {
 
 
     return (
-        <div id={`slide${id}`} className="carousel-item relative w-full">
+        <div id={`slide${id}`} className="carousel-item relative w-full brightness-75">
         <div className='carousel-img'>
             <img src={image} alt="" className='w-full rounded-xl hero-overlay bg-opacity-60' />
         </div>

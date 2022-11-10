@@ -41,7 +41,7 @@ const Orders = () => {
             .then(data =>{
                 console.log(data);
                 if(data.deletedCount >  0){
-                  alert("Deleted Successfully")
+                   alert("Deleted Successfully")
                     const remaining = orders.filter(order => order._id !== id);
                     setOrders(remaining);
                 }
@@ -76,7 +76,7 @@ const Orders = () => {
 
     return (
         <div>
-            <h2 className='text-3xl'>You have confirm {orders.length} orders</h2>
+            <h2 className='text-3xl'>You have confirm {orders.length} service</h2>
 
           
             <div className="overflow-x-auto w-full mb-4 mt-4">

@@ -25,6 +25,7 @@ const Header = () => {
         <button onClick={handleLogOut}   className='btn-ghost mr-2'>Log Out</button>
        </li>
        <li className='font-semibold mr-2'><Link to="/orders">Add Service</Link></li>
+       <li className='font-semibold mr-2'><Link to="/orders">My Reviews</Link></li>
          </>
          :
          <li className='font-semibold mr-2'><Link to="/login">Login</Link></li>
@@ -60,9 +61,9 @@ const Header = () => {
 
           </ul>
         </div>
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
         <button className="btn btn-outline btn-info">Booking Now</button>
-        </div>
+        </div> */}
       </div>
     );
 };

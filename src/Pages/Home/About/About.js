@@ -1,13 +1,13 @@
 import React from 'react';
-import about1 from '../../../Assets/about-img/about1.webp'
-import about2 from '../../../Assets/about-img/about2.jpg'
+import about1 from '../../../Assets/about-img/about11.jpg'
+import about2 from '../../../Assets/about-img/about22.jpg'
 
 const About = () => {
     return (
         <div className="hero min-h-screen my-20 bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
         <div className='relative w-1/2'>
-        <img src={about1} alt='' className="w-4/5 h-full rounded-lg shadow-2xl" />
+        <img src={about1} alt='' className="w-3/5 h-full rounded-lg shadow-2xl" />
         <img src={about2} alt='' className="absolute w-3/5 right-5 top-1/2 border-8 rounded-lg shadow-2xl" />
         </div>
 
