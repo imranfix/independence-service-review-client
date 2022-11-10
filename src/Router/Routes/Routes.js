@@ -8,6 +8,7 @@ import Blog from '../../Pages/Blog/Question/Questions';
 import ServiceInfo from "../../Pages/ServiceInfo/ServiceInfo";
 import Orders from "../../Pages/Orders/Orders";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
+import Review from "../../Pages/Orders/Review";
 
 
 
@@ -50,6 +51,12 @@ const router = createBrowserRouter([
             element: <PrivateRouter>
                 <Orders></Orders>
             </PrivateRouter>
+        },
+
+        {
+            path: '/review/:id',
+            element: <Review></Review>,
+            loader: ({params}) => fetch(`https://independence-service-review-server.vercel.app/reviews/${params.id}`)
         }
 
 

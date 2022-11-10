@@ -47,7 +47,8 @@ const Orders = () => {
                 }
             })
         }
-    }
+    };
+    
 
     // Updated status function:
     const handleStatusUpdate = id =>{

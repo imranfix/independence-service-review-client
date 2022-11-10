@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    
     useEffect( () =>{
         fetch('https://independence-service-review-server.vercel.app/services')
         .then(res => res.json())

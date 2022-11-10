@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,6 +21,9 @@ const OrderRow = ({order, handleDeleteButton,  handleStatusUpdate}) => {
         <th>
             <label>
             <button onClick={()=> handleDeleteButton(_id)} className='btn btn-warning'>Delete</button>
+          <Link to={`/review/${order._id}`}>
+          <button className='btn btn-gray ml-2'>edit</button>
+          </Link>
           </label>
         </th> 
         <td>
